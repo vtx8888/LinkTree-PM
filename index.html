@@ -96,11 +96,17 @@
                 0 0 18px 4px rgba(59, 130, 246, 0.25);
         }
 
+        @keyframes adhara-glow {
+            0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 0px rgba(255,255,255,0)); }
+            50% { opacity: 1; filter: drop-shadow(0 0 8px rgba(255,255,255,0.5)); }
+        }
+
         .logo-icon img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
+            animation: adhara-glow 3s ease-in-out infinite;
         }
 
         .logo-text {
@@ -173,15 +179,15 @@
         }
 
         @keyframes pulse-fade {
-            0%, 100% { opacity: 0.45; }
-            50% { opacity: 1; }
+            0%, 100% { opacity: 0.3; transform: scale(1); text-shadow: none; }
+            50% { opacity: 1; transform: scale(1.06); text-shadow: 0 0 10px rgba(255,255,255,0.8); }
         }
 
         .description-sub {
             margin-top: 8px;
             font-size: 0.85rem;
             color: rgba(255, 255, 255, 0.45);
-            animation: pulse-fade 2s ease-in-out infinite;
+            animation: pulse-fade 1.4s ease-in-out infinite;
         }
 
         /* Barra colorida (Amarelo, Branco, Azul) */
